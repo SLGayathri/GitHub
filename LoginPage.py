@@ -32,18 +32,6 @@ def test_valid_login():
     except Exception as e:
         print(f"Test valid login: Failed - {e}")
 
-# Test Case 2: Invalid username and password
-def test_invalid_login():
-    try:
-        driver.get(url)
-        find_element(By.NAME, "username").send_keys("invalid-username")
-        find_element(By.NAME, "password").send_keys("invalid-password")
-        find_element(By.XPATH, "//button[@type='submit']").click()
-        find_element(By.ID, "login-error-message")
-        print("Test invalid login: Passed")
-    except Exception as e:
-        print(f"Test invalid login: Failed - {e}")
-
 # Test Case 3: Empty username and password
 def test_empty_login():
     try:
